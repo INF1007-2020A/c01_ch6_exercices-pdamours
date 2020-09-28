@@ -4,25 +4,25 @@
 
 def order(values: list = None) -> bool:
     if values is None:
-        # TODO: Demander les valeurs ici
-        pass
-
-    return False
+        values = [input("Entrez...") for _ in range(10)]
+        
+    return values == sorted(values)
 
 
 def anagrams(words: list = None) -> bool:
     if words is None:
-        # TODO: Demander les mots ici
-        pass
+        words = [sorted(input()), sorted(input())]
 
-    return False
+    return words[0] == words[1]
 
 
 def contains_doubles(items: list) -> bool:
-    return False
+    uniques = set(items)
+    
+    return len(items) == len(uniques)
 
 
-def best_grades(student_grades: dict) -> dict:
+def best_grades(student_grades: dict) -> tuple:
     # TODO: Retourner un dictionnaire contenant le nom de l'étudiant ayant la meilleure moyenne ainsi que sa moyenne
     return {}
 
